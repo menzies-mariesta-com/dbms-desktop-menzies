@@ -1,0 +1,21 @@
+{
+	"$schema": "../gen/schemas/desktop-schema.json",
+	"identifier": "default",
+	"description": "Window chrome, dialogs, updater, and process permissions for Database Manager",
+	"windows": ["main"],
+	"permissions": [
+		"core:default",
+		"core:window:allow-close",
+		"core:window:allow-minimize",
+		"core:window:allow-maximize",
+		"core:window:allow-unmaximize",
+		"core:window:allow-toggle-maximize",
+		"core:window:allow-is-maximized",
+		"core:window:allow-start-dragging",
+		"updater:default",
+		"process:allow-restart",
+		"dialog:default",
+		"dialog:allow-open",
+		"dialog:allow-save"
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.tauri.app/config/2",
+	"productName": "Database Manager",
+	"version": "0.1.0",
+	"identifier": "com.mariesta.menzies.dbms-desktop-menzies",
+	"build": {
+		"frontendDist": "../build",
+		"devUrl": "http://localhost:2010",
+		"beforeDevCommand": "npm run dev",
+		"beforeBuildCommand": "npm run build"
+	},
+	"app": {
+		"windows": [
+			{
+				"label": "main",
+				"title": "Database Manager",
+				"width": 1280,
+				"height": 800,
+				"minWidth": 720,
+				"minHeight": 520,
+				"resizable": true,
+				"fullscreen": false,
+				"decorations": false,
+				"center": true
+			}
+		],
+		"security": {
+			"csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost ws://localhost:2010 http://localhost:2010; worker-src 'self' blob:"
+		}
+	},
+	"bundle": {
+		"active": true,
+		"createUpdaterArtifacts": true,
+		"targets": "all",
+		"icon": [
+			"icons/32x32.png",
+			"icons/128x128.png",
+			"icons/128x128@2x.png",
+			"icons/icon.icns",
+			"icons/icon.ico"
+		]
+	},
+	"plugins": {
+		"updater": {
+			"pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDQ4Nzc0MTMzRjc1RjA5MjMKUldRakNWLzNNMEYzU0JEUTdHa1NXTkIza3RwRWxhQmhaNE4xdTZqeUcremhVb2JBaHk0TyszNzcK",
+			"endpoints": [
+				"https://github.com/menzies-mariesta-com/dbms-desktop-menzies/releases/latest/download/latest.json"
+			]
+		}
+	}
+}
